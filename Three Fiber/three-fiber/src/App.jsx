@@ -7,15 +7,12 @@ function App() {
   return (
     <>
       <Canvas
-        shadows
-        gl={{
-          antialias: true,
-          toneMapping: THREE.ACESFilmicToneMapping,
-          outputEncoding: THREE.LinearEncoding,
-        }}
+        flat
         camera={{
           fov: 45,
-          position: [3, 2, 6],
+          near: 0.1,
+          far: 200,
+          position: [1, 2, 6],
         }}
       >
         <Experience />
